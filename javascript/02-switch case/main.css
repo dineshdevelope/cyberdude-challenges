@@ -1,0 +1,14 @@
+body {
+  background-color: bisque;
+}
+h1 {
+  color: green;
+  text-align: center;
+}
+.d-mart {
+  margin-left: 30%;
+}
+p {
+  margin: 10px;
+  color: limegreen;
+}
