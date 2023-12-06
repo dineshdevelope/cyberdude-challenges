@@ -1,4 +1,4 @@
-// Task: Create a Array of Objects and loop through it. Discuss about various looping options
+// Task: Create a Array of Objects and loop through it. various looping options
 
 //1.For Loop  [For..in , For..of , ForEach]
 //2.While Loop
@@ -50,20 +50,20 @@ const companyCeo = [
 ];
 
 //For Loop is used to repeatedly execute a block of code as untill the condition is false
-//syntax:
-// for (initial value; condition; iteration) {
-// code to be executed
-//}
+/* syntax:
+ for (initial value; condition; iteration) {
+ code to be executed
+} */
 
 for (i = 0; i < companyCeo.length; i++) {
   console.log("For-Loop :", companyCeo[i]);
 }
 
 //For..in
-//syntax:
-//  for (let variableName in ObjName) {
-// code to be executed
-//}
+/* yntax:
+  for (let variableName in ObjName) {
+ code to be executed
+} */
 
 //to get the position [index]
 for (let key in companyCeo) {
@@ -75,7 +75,7 @@ for (let key in companyCeo) {
 }
 
 //For..of
-//syntax:
+/* syntax: */
 // for (let variableName of ObjName) {
 // code to be executed
 //}
@@ -86,23 +86,23 @@ for (let key2 of companyCeo) {
 }
 
 //For..Each
-//syntax:
-//ObjName.forEach((variableName) => {
-//console.log(variableName);
-//console.log(variableName.keyName)
-//});
+/* syntax:
+ObjName.forEach((variableName) => {
+console.log(variableName);
+console.log(variableName.keyName)
+//}); */
 
 companyCeo.forEach((each) => {
   console.log("For-Each", each.name);
 });
 
 //While-Loop
-//syntax:
-//initial value;
-//while(condition){
-// code to be executed
-//iteration;
-//}
+/* syntax:
+initial value;
+while(condition){
+ code to be executed
+iteration;
+} */
 
 let j = 0;
 while (j < companyCeo.length) {
@@ -110,13 +110,12 @@ while (j < companyCeo.length) {
   j++;
 }
 
-//Do-While
-//syntax:
-//do{
-// code to be executed
-//iteration;
-//}whole (condition)
-let k = 4;
+/* Do-While */
+/* do{
+ code to be executed
+iteration;
+}while (condition) */
+syntax: k = 4;
 do {
   console.log("Do-While Loop:", companyCeo[k]);
   k++;
