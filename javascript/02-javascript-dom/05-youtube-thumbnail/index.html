@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube_Thumbnail_Viewer</title>
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body class="bg-blue-500">
+    <!-- Write your HTML here -->
+    <form
+      class="bg-teal-300 p-5 max-w-xl mx-auto m-10 rounded space-y-3"
+      id="thumbnail"
+    >
+      <div>
+        <label for="url" class="font-sans font-medium"
+          >Paste your link below :
+        </label>
+      </div>
+      <div class="space-y-3">
+        <div>
+          <input
+            type="url"
+            id="url"
+            placeholder="Paste your URL"
+            class="w-full p-1 px-3 outline-none rounded"
+            required
+          />
+        </div>
+        <div>
+          <button
+            class="w-full bg-cyan-600 hover:bg-blue-700 p-2 rounded text-white font-semibold font-serif"
+          >
+            Get Thumbnail Image
+          </button>
+        </div>
+      </div>
+    </form>
+    <section>
+      <p class="font-serif bg-blue-400 max-w-md text-center mx-auto rounded">
+        All images are from
+        <a href="https://www.youtube.com/" target="_blank" class="text-gray-700"
+          >https://www.youtube.com/</a
+        >
+      </p>
+    </section>
+    <main class="max-w-2xl mx-auto py-5" id="main">
+      <!-- <div>
+        <img
+          alt="thumbnail"
+          title="your URL video thumbnail"
+          id="thumbnailImg"
+        />
+      </div> -->
+    </main>
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
