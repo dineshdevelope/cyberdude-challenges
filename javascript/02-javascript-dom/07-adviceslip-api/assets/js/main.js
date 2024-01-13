@@ -1,60 +1,19 @@
-//Calling The API
-// let data = new XMLHttpRequest();
+const blockQuoteEl = document.querySelector("blockquote");
 
-//Get And Parse the data
+//console.log(blockQuoteEl);
 
-//Show in UI
+const btnEl = document.getElementById("Btn");
+//console.log(btnEl);
 
-//Promises
-const decition = new Promise((reslove, reject) => {
-  //let resign;
-  let resign = false;
+const xhr = new XMLHttpRequest();
 
-  // 3 sec wait
-  setTimeout(() => {
-    if (resign) {
-      reslove({ id: 1, result: "Good Idea" });
-    } else {
-      reject({ result: "Bad Idea" });
-    }
-  }, 3000);
-});
+xhr.responseType = "json";
 
-/* decition
-  .then((msg) => {
-    console.log(msg);
-  })
-  .catch((reject) => {
-    console.log(reject);
-  })
-  .finally(() => {
-    console.log(` Finally You did It`);
-  }); */
-
-//console.log(decition);
-
-// await
-/* async function getdecition() {
-  const finalResult = await decition;
-  console.log(finalResult);
-} */
-
-const blackQuoteEl = document.querySelector("blockquote");
-
-console.log(blackQuoteEl);
-
-const getdecition = async () => {
-  try {
-    const finalResult = await decition;
-
-    const msg = "King Is King !";
-    blackQuoteEl.innerText = msg + JSON.stringify(finalResult);
-
-    console.log(finalResult);
-  } catch (error) {
-    const msg = "Queen Is Queen !";
-    blackQuoteEl.innerText = msg + JSON.stringify(error.result);
+xhr.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    blockQuoteEl.textContent = xhr.response.slip.advice;
   }
 };
 
-getdecition();
+xhr.open("GET", "https://api.adviceslip.com/advice");
+xhr.send();
