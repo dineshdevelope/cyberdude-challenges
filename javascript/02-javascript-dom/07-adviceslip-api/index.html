@@ -7,16 +7,81 @@
     <title>Advice Generator</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body class="bg-cyan-300 p-10">
-    <div class="bg-white max-w-xl mx-auto p-5 rounded shadow">
-      <blockquote class="font-semibold text-gray-600 text-center"></blockquote>
+  <body class="bg-cyan-300 p-5 sm:p-10">
+    <h1 class="text-center text-xl m-3 sm:m-5 font-semibold text-gray-500">
+      Boomer Advice
+    </h1>
+    <div class="flex space-x-1 justify-center pb-4">
+      <div class="text-gray-500 font-semibold hover:text-black">
+        <a href="https://github.com/dineshdevelope/cyberdude-challenges"
+          >(Github)</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://github.com/dineshdevelope/cyberdude-challenges/tree/main/javascript/02-javascript-dom/07-adviceslip-api"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 16 16"
+            class="text-white bg-gray-500 rounded cursor-pointer hover:text-black"
+          >
+            <path
+              fill="#ffffff"
+              d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38c0-.27.01-1.13.01-2.2c0-.75-.25-1.23-.54-1.48c1.78-.2 3.65-.88 3.65-3.95c0-.88-.31-1.59-.82-2.15c.08-.2.36-1.02-.08-2.12c0 0-.67-.22-2.2.82c-.64-.18-1.32-.27-2-.27c-.68 0-1.36.09-2 .27c-1.53-1.03-2.2-.82-2.2-.82c-.44 1.1-.16 1.92-.08 2.12c-.51.56-.82 1.28-.82 2.15c0 3.06 1.86 3.75 3.64 3.95c-.23.2-.44.55-.51 1.07c-.46.21-1.61.55-2.33-.66c-.15-.24-.6-.83-1.23-.82c-.67.01-.27.38.01.53c.34.19.73.9.82 1.13c.16.45.68 1.31 2.69.94c0 .67.01 1.3.01 1.49c0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"
+            /></svg
+        ></a>
+      </div>
+    </div>
+
+    <div class="bg-white w-auto sm:max-w-xl mx-auto p-3 sm:p-5 rounded shadow">
+      <figure class="max-w-screen-md mx-auto text-center">
+        <svg
+          class="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 18 14"
+        >
+          <path
+            d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"
+          />
+        </svg>
+        <blockquote>
+          <p
+            class="text-2xl italic font-medium text-gray-900 dark:text-white"
+          ></p>
+        </blockquote>
+        <figcaption
+          class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            class="w-6 h-6 rounded-full"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+            alt="profile picture"
+          />
+          <div
+            class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700"
+          >
+            <cite class="pe-3 font-medium text-gray-900 dark:text-white"
+              >Boomer Advice</cite
+            >
+            <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400"
+              ><a href="https://api.adviceslip.com/advice" target="_blank"
+                >https://api.adviceslip.com/advice</a
+              ></cite
+            >
+          </div>
+        </figcaption>
+      </figure>
 
       <div class="text-center pt-5">
         <button
-          class="bg-blue-400 p-3 rounded text-white font-semibold"
+          class="bg-blue-500 hover:bg-blue-600 p-3 rounded text-white font-semibold"
           id="Btn"
         >
-          Click Here
+          Another Advice
         </button>
       </div>
     </div>

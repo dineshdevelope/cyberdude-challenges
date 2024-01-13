@@ -1,19 +1,28 @@
-const blockQuoteEl = document.querySelector("blockquote");
-
-//console.log(blockQuoteEl);
+const blockQuoteEl = document.querySelector("blockquote > p");
 
 const btnEl = document.getElementById("Btn");
-//console.log(btnEl);
 
-const xhr = new XMLHttpRequest();
+const API_URL = "https://api.adviceslip.com/advice";
 
-xhr.responseType = "json";
+btnEl.style.display = "none";
 
-xhr.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    blockQuoteEl.textContent = xhr.response.slip.advice;
+btnEl.addEventListener("click", () => {
+  window.location.href = "/";
+});
+
+async function getAdvicesData() {
+  try {
+    const response = await fetch(API_URL);
+    const jsonData = await response.json();
+    return jsonData;
+  } catch (error) {
+    console.log(`Error Happen ${error}`);
   }
-};
+}
 
-xhr.open("GET", "https://api.adviceslip.com/advice");
-xhr.send();
+const adviceData = await getAdvicesData();
+
+blockQuoteEl.textContent = adviceData.slip.advice;
+
+//display the button after loading the Advise
+btnEl.style.display = "block";
