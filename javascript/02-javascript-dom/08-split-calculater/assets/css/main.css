@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.tabledata {
+  @apply px-2 py-1 border text-indigo-500 font-mono;
+}
+.registereddata {
+  @apply px-2 py-1 border;
+}

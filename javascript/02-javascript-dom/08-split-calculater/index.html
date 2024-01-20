@@ -6,7 +6,7 @@
     <title>Split-Calculater</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body>
+  <body class="bg-indigo-100">
     <h1 class="bg-red-400 p-5 text-center max-w-md mx-auto">
       Split-Calculater
     </h1>
@@ -50,6 +50,27 @@
         id="splitAmount"
         class="bg-green-200 rounded outline-none"
       />
+    </div>
+
+    <div
+      class="bg-white rounded p-5 max-w-md mx-auto mt-10 hidden"
+      id="history"
+    >
+      <div class="flex items-center space-x-2">
+        <h4 class="font-semibold text-xl">History</h4>
+      </div>
+      <div class="my-5 space-y-5">
+        <table
+          class="table table-fixed border w-full text-center border-double border-indigo-300 rounded"
+        >
+          <tr>
+            <th class="tabledata">Total Amount</th>
+            <th class="tabledata">Total Members</th>
+            <th class="tabledata">Split Amount</th>
+          </tr>
+          <tbody id="historyTable"></tbody>
+        </table>
+      </div>
     </div>
 
     <script type="module" src="./assets/js/main.js"></script>
