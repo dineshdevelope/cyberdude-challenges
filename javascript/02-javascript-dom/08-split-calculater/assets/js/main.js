@@ -10,10 +10,11 @@ formEl.addEventListener("submit", (e) => {
 
   const countryCode = document.getElementById("countryCode").value;
   console.log(countryCode);
+
   const totalmembers = document.getElementById("total-member").value;
   console.log(totalmembers);
 
-  const splitAmount = parseFloat(totalAmount / totalmembers);
+  const splitAmount = parseFloat(totalAmount / totalmembers).toFixed(2);
   console.log(splitAmount);
   const splitAmountEl = document.getElementById("splitAmount");
   splitAmountEl.value = splitAmount;
