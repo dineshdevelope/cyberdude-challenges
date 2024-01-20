@@ -7,6 +7,9 @@ formEl.addEventListener("submit", (e) => {
   e.preventDefault();
   const totalAmount = document.getElementById("total-amount").value;
   console.log(totalAmount);
+
+  const countryCode = document.getElementById("countryCode").value;
+  console.log(countryCode);
   const totalmembers = document.getElementById("total-member").value;
   console.log(totalmembers);
 
@@ -14,12 +17,13 @@ formEl.addEventListener("submit", (e) => {
   console.log(splitAmount);
   const splitAmountEl = document.getElementById("splitAmount");
   splitAmountEl.value = splitAmount;
-  //formEl.reset();
+
   // Create an object to represent the data
   const formData = {
     totalAmount: totalAmount,
     totalmembers: totalmembers,
     splitAmount: splitAmount,
+    countryCode: countryCode,
   };
   formEl.reset();
 
@@ -73,6 +77,7 @@ function getAllHistory() {
       const totalAmoutEl = document.createElement("td");
       const totalMembersEl = document.createElement("td");
       const splitAmountEl = document.createElement("td");
+      const currencyTypeEl = document.createElement("td");
 
       //adding style and text content in table
       totalAmoutEl.classList.add("registereddata");
@@ -84,9 +89,12 @@ function getAllHistory() {
       splitAmountEl.classList.add("registereddata");
       splitAmountEl.textContent = formData.splitAmount;
 
+      currencyTypeEl.classList.add("registereddata");
+      currencyTypeEl.textContent = formData.countryCode;
+
       // showing elements in UI
 
-      trEl.append(totalAmoutEl, totalMembersEl, splitAmountEl);
+      trEl.append(totalAmoutEl, totalMembersEl, splitAmountEl, currencyTypeEl);
 
       newFinalValue.push(trEl);
     });
