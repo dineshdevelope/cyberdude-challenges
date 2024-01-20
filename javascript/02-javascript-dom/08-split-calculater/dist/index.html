@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Split-Calculater</title>
-    <script type="module" crossorigin src="./assets/index-onwxcjdi.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-v6lItyjm.css" />
+    <script type="module" crossorigin src="./assets/index-GeRHaCEN.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-0UcRxIyR.css" />
   </head>
-  <body>
+  <body class="bg-indigo-100">
     <h1 class="bg-red-400 p-5 text-center max-w-md mx-auto">
       Split-Calculater
     </h1>
@@ -51,6 +51,27 @@
         id="splitAmount"
         class="bg-green-200 rounded outline-none"
       />
+    </div>
+
+    <div
+      class="bg-white rounded p-5 max-w-md mx-auto mt-10 hidden"
+      id="history"
+    >
+      <div class="flex items-center space-x-2">
+        <h4 class="font-semibold text-xl">History</h4>
+      </div>
+      <div class="my-5 space-y-5">
+        <table
+          class="table table-fixed border w-full text-center border-double border-indigo-300 rounded"
+        >
+          <tr>
+            <th class="tabledata">Total Amount</th>
+            <th class="tabledata">Total Members</th>
+            <th class="tabledata">Split Amount</th>
+          </tr>
+          <tbody id="historyTable"></tbody>
+        </table>
+      </div>
     </div>
   </body>
 </html>
