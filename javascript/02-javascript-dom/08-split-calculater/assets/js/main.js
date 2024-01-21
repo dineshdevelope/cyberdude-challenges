@@ -26,7 +26,6 @@ formEl.addEventListener("submit", (e) => {
     splitAmount: splitAmount,
     countryCode: countryCode,
   };
-  formEl.reset();
 
   const localStorageKey = "history-data";
 
@@ -52,7 +51,6 @@ formEl.addEventListener("submit", (e) => {
   }
 
   getAllHistory();
-  formEl.reset();
 });
 
 function getAllHistory() {

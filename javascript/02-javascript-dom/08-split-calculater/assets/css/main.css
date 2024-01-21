@@ -8,3 +8,9 @@
 .registereddata {
   @apply px-2 py-1 border;
 }
+.uniquifier {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}

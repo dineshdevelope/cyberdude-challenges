@@ -3,128 +3,308 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Split-Calculator</title>
+    <title>Split Calculator</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@1,300&family=Nunito+Sans:opsz,wght@6..12,800&family=Rubik+Doodle+Shadow&display=swap");
+    </style>
   </head>
-  <body class="bg-indigo-100">
-    <div class="bg-blue-200 rounded-2xl p-5 max-w-md mx-auto">
-      <div
-        class="bg-red-400 p-5 text-center max-w-md mx-auto text-white text-2xl font-serif rounded-lg"
+  <body>
+    <div class="min-h-screen">
+      <nav
+        class="flex items-center justify-between flex-wrap bg-teal-400 p-6 rounded-lg"
       >
-        Split Calculator
-      </div>
-
-      <form action="" method="get" id="form" class="max-w-md mx-auto p-5">
-        <div class="space-y-5 m-5">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="100"
+            height="100"
+            viewBox="0 0 64 64"
+            class="hidden sm:block"
+          >
+            <linearGradient
+              id="UywsLlSaArhSLUaMKbZjMa_aqWDxhA3yiU1_gr1"
+              x1="26"
+              x2="26"
+              y1="29"
+              y2="33"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#6dc7ff"></stop>
+              <stop offset="1" stop-color="#e6abff"></stop>
+            </linearGradient>
+            <circle
+              cx="26"
+              cy="31"
+              r="2"
+              fill="url(#UywsLlSaArhSLUaMKbZjMa_aqWDxhA3yiU1_gr1)"
+            ></circle>
+            <linearGradient
+              id="UywsLlSaArhSLUaMKbZjMb_aqWDxhA3yiU1_gr2"
+              x1="32"
+              x2="32"
+              y1="29"
+              y2="33"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#6dc7ff"></stop>
+              <stop offset="1" stop-color="#e6abff"></stop>
+            </linearGradient>
+            <circle
+              cx="32"
+              cy="31"
+              r="2"
+              fill="url(#UywsLlSaArhSLUaMKbZjMb_aqWDxhA3yiU1_gr2)"
+            ></circle>
+            <linearGradient
+              id="UywsLlSaArhSLUaMKbZjMc_aqWDxhA3yiU1_gr3"
+              x1="26"
+              x2="26"
+              y1="35"
+              y2="39"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#6dc7ff"></stop>
+              <stop offset="1" stop-color="#e6abff"></stop>
+            </linearGradient>
+            <circle
+              cx="26"
+              cy="37"
+              r="2"
+              fill="url(#UywsLlSaArhSLUaMKbZjMc_aqWDxhA3yiU1_gr3)"
+            ></circle>
+            <linearGradient
+              id="UywsLlSaArhSLUaMKbZjMd_aqWDxhA3yiU1_gr4"
+              x1="32"
+              x2="32"
+              y1="35"
+              y2="39"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#6dc7ff"></stop>
+              <stop offset="1" stop-color="#e6abff"></stop>
+            </linearGradient>
+            <circle
+              cx="32"
+              cy="37"
+              r="2"
+              fill="url(#UywsLlSaArhSLUaMKbZjMd_aqWDxhA3yiU1_gr4)"
+            ></circle>
+            <linearGradient
+              id="UywsLlSaArhSLUaMKbZjMe_aqWDxhA3yiU1_gr5"
+              x1="32"
+              x2="32"
+              y1="19"
+              y2="25.956"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#6dc7ff"></stop>
+              <stop offset="1" stop-color="#e6abff"></stop>
+            </linearGradient>
+            <path
+              fill="url(#UywsLlSaArhSLUaMKbZjMe_aqWDxhA3yiU1_gr5)"
+              d="M38,25.957H26c-1.105,0-2-0.895-2-2V21c0-1.105,0.895-2,2-2h12c1.105,0,2,0.895,2,2v2.957	C40,25.061,39.105,25.957,38,25.957z"
+            ></path>
+            <linearGradient
+              id="UywsLlSaArhSLUaMKbZjMf_aqWDxhA3yiU1_gr6"
+              x1="32"
+              x2="32"
+              y1="9"
+              y2="55"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#1a6dff"></stop>
+              <stop offset="1" stop-color="#c822ff"></stop>
+            </linearGradient>
+            <path
+              fill="url(#UywsLlSaArhSLUaMKbZjMf_aqWDxhA3yiU1_gr6)"
+              d="M39,49H25c-2.757,0-5-2.243-5-5V20c0-2.757,2.243-5,5-5h14c2.757,0,5,2.243,5,5v24	C44,46.757,41.757,49,39,49z M25,17c-1.654,0-3,1.346-3,3v24c0,1.654,1.346,3,3,3h14c1.654,0,3-1.346,3-3V20c0-1.654-1.346-3-3-3H25	z M38,29c-1.105,0-2,0.895-2,2c0,1.105,0.895,2,2,2s2-0.895,2-2C40,29.895,39.105,29,38,29z M38,35c-1.105,0-2,0.895-2,2	s0.895,2,2,2s2-0.895,2-2S39.105,35,38,35z M38,41c-1.105,0-2,0.895-2,2s0.895,2,2,2s2-0.895,2-2S39.105,41,38,41z M50,55H14	c-2.757,0-5-2.243-5-5V14c0-2.757,2.243-5,5-5h36c2.757,0,5,2.243,5,5v36C55,52.757,52.757,55,50,55z M14,11c-1.654,0-3,1.346-3,3	v36c0,1.654,1.346,3,3,3h36c1.654,0,3-1.346,3-3V14c0-1.654-1.346-3-3-3H14z"
+            ></path>
+            <linearGradient
+              id="UywsLlSaArhSLUaMKbZjMg_aqWDxhA3yiU1_gr7"
+              x1="29"
+              x2="29"
+              y1="41"
+              y2="45"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#6dc7ff"></stop>
+              <stop offset="1" stop-color="#e6abff"></stop>
+            </linearGradient>
+            <path
+              fill="url(#UywsLlSaArhSLUaMKbZjMg_aqWDxhA3yiU1_gr7)"
+              d="M32,41h-6c-1.105,0-2,0.895-2,2c0,1.105,0.895,2,2,2h6c1.105,0,2-0.895,2-2	C34,41.895,33.105,41,32,41z"
+            ></path>
+          </svg>
+          <span
+            class="font-semibold tracking-tight font-mono text-2xl text-blue-700"
+            >SplitCalculator</span
+          >
+        </div>
+        <div class="block lg:hidden">
+          <button
+            class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            <a
+              href="#responsive-header"
+              class="block mt-4 lg:inline-block lg:mt-0 text-violet-600 font-semibold hover:text-white mr-4 text-lg"
+            >
+              Home
+            </a>
+            <a
+              href="#history"
+              class="block mt-4 lg:inline-block lg:mt-0 text-violet-600 hover:text-white mr-4 text-lg font-semibold"
+            >
+              History
+            </a>
+          </div>
           <div>
-            <div class="font-serif text-2xl">
-              <label for="total-amount">Total Amount</label>
-              <div class="flex space-x-3 rounded" style="align-items: center">
+            <a
+              href="#"
+              class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+              >Download Source Code</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="block sm:flex justify-evenly p-3 bg-teal-100">
+        <div class="space-y-2 w-1/2">
+          <p class="text-3xl font-serif font-light uniquifier text-gray-500">
+            No Need To Carry a Calculator With You
+          </p>
+          <p class="text-center text-2xl uniquifier text-gray-500">
+            😉😉😉...!
+          </p>
+          <p class="uniquifier text-2xl text-gray-500 text-center">
+            Just Use This App & Get Your Bill Amount...!
+          </p>
+          <img src="./assets/img/calc.png" alt="Calculater-Img" />
+          <div class="uniquifier text-xl text-gray-500 text-center">
+            - Say Bye to Calculator
+          </div>
+        </div>
+
+        <div class="w-1/2 p-5">
+          <form action="" method="get" id="form" class="">
+            <div class="space-y-5">
+              <div class="block font-serif text-5xl text-gray-600">
+                <label for="total-amount">Enter your total bill amount</label>
+              </div>
+
+              <div>
+                <input
+                  type="number"
+                  id="total-amount"
+                  class="bg-green-100 rounded outline-none text-center w-full p-3 text-2xl font-semibold"
+                  required
+                  placeholder="Enter bill amount"
+                />
+              </div>
+
+              <div class="block font-serif text-5xl text-gray-600">
+                <label for="total-member">Total Members</label>
+              </div>
+
+              <input
+                type="number"
+                id="total-member"
+                class="bg-green-100 rounded outline-none text-center w-full p-3 text-2xl font-semibold"
+                required
+                placeholder="Enter total members"
+              />
+
+              <div class="block font-serif">
+                <select
+                  name="countryCode"
+                  id="countryCode"
+                  class="text-gray-700 px-2 py-2 outline-none rounded bg-green-100 w-full p"
+                >
+                  <option value="INR">INR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="EUR">EUR</option>
+                  <option value="USD">USD</option>
+                  <option value="AUD">AUD</option>
+                  <option value="NZD">NZD</option>
+                  <option value="ALL">ALL</option>
+                  <option value="DZD">DZD</option>
+                </select>
+              </div>
+
+              <div
+                class="flex justify-center space-x-10"
+                style="align-items: center"
+              >
                 <div>
-                  <input
-                    type="number"
-                    id="total-amount"
-                    class="bg-green-200 rounded outline-none text-center"
-                    required
-                    placeholder="Enter bill amount"
-                  />
-                </div>
-                <div class="rounded-lg">
-                  <select
-                    name="countryCode"
-                    id="countryCode"
-                    class="text-gray-700 px-2 py-2 outline-none rounded bg-green-100 rounded"
+                  <button
+                    id="calculate"
+                    class="bg-red-400 rounded p-3 text-white font-serif"
                   >
-                    <option value="INR">INR</option>
-                    <option value="GBP">GBP</option>
-                    <option value="EUR">EUR</option>
-                    <option value="USD">USD</option>
-                    <option value="AUD">AUD</option>
-                    <option value="NZD">NZD</option>
-                    <option value="ALL">ALL</option>
-                    <option value="DZD">DZD</option>
-                    <option value="AOA">AOA</option>
-                    <option value="ARS">ARS</option>
-                    <option value="AMD">AMD</option>
-                    <option value="AZN">AZN</option>
-                    <option value="BSD">BSD</option>
-                    <option value="BHD">BHD</option>
-                    <option value="BDT">BDT</option>
-                    <option value="BBD">BBD</option>
-                    <option value="BZD">BZD</option>
-                    <option value="BMD">BMD</option>
-                    <option value="XCD">XCD</option>
-                    <option value="BWP">BWP</option>
-                    <option value="BRL">BRL</option>
-                    <option value="BND">BND</option>
-                    <option value="CAD">CAD</option>
-                    <option value="CVE">CVE</option>
-                    <option value="KYD">KYD</option>
-                    <option value="XAF">XAF</option>
-                    <option value="XPF">XPF</option>
-                    <option value="CLP">CLP</option>
-                    <option value="CNY">CNY</option>
-                    <option value="COP">COP</option>
-                  </select>
+                    Calculate
+                  </button>
+                </div>
+
+                <div>
+                  <a
+                    id="reset"
+                    class="bg-red-400 rounded p-3 text-white font-serif"
+                    href="./index.html"
+                  >
+                    Reset
+                  </a>
                 </div>
               </div>
             </div>
-            <div></div>
-          </div>
+          </form>
 
-          <div class="font-serif text-2xl">
-            <label for="total-member">Total Members</label>
+          <div
+            class="max-w-md mx-auto p-3 space-y-2 font-serif text-2xl text-center"
+          >
+            <label for="splitAmount" class="font-serif">Split Amount</label>
             <input
               type="number"
-              id="total-member"
+              id="splitAmount"
               class="bg-green-200 rounded outline-none text-center"
-              required
-              placeholder="Enter total members"
             />
           </div>
-
-          <div class="mx-auto max-w-md text-center pt-10">
-            <button
-              id="calculate"
-              class="bg-red-400 rounded p-3 text-white font-serif"
-            >
-              Calculate
-            </button>
-          </div>
         </div>
-      </form>
-
-      <div
-        class="max-w-md mx-auto p-3 space-y-2 font-serif text-2xl text-center"
-      >
-        <label for="splitAmount" class="font-serif">Split Amount</label>
-        <input
-          type="number"
-          id="splitAmount"
-          class="bg-green-200 rounded outline-none text-center"
-        />
       </div>
     </div>
 
-    <div
-      class="bg-white rounded p-5 max-w-md mx-auto mt-10 hidden"
-      id="history"
-    >
-      <div class="flex items-center space-x-2">
-        <h4 class="font-semibold text-xl">History</h4>
-      </div>
-      <div class="my-5 space-y-5">
-        <table
-          class="table table-fixed border w-full text-center border-double border-indigo-300 rounded"
-        >
-          <tr>
-            <th class="tabledata">Total Amount</th>
-            <th class="tabledata">Total Members</th>
-            <th class="tabledata">Split Amount</th>
-            <th class="tabledata">Currency Type</th>
-          </tr>
-          <tbody id="historyTable"></tbody>
-        </table>
+    <div class="bg-teal-100">
+      <div
+        class="bg-green-100 rounded p-5 max-w-md mx-auto hidden"
+        id="history"
+      >
+        <div class="flex items-center space-x-2">
+          <h4 class="font-semibold text-xl">History</h4>
+        </div>
+        <div class="my-5 space-y-5">
+          <table
+            class="table table-fixed border w-full text-center border-double border-indigo-300 rounded"
+          >
+            <tr>
+              <th class="tabledata">Total Amount</th>
+              <th class="tabledata">Total Members</th>
+              <th class="tabledata">Split Amount</th>
+              <th class="tabledata">Currency Type</th>
+            </tr>
+            <tbody id="historyTable"></tbody>
+          </table>
+        </div>
       </div>
     </div>
 
